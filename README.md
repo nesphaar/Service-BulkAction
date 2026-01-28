@@ -1,11 +1,11 @@
 # Service-BulkAction
-🛠️ Bulk Service Manager (PowerShell)
+**🛠️ Bulk Service Manager (PowerShell)**
 
 A lightweight interactive PowerShell tool to start or stop Windows services in bulk by searching for text inside the service Name or DisplayName.
 
 Designed for Windows 10 and newer.
 
-✨ Features
+**✨ Features**
 
 Interactive menu (numeric selection)
 
@@ -23,11 +23,11 @@ Service Name
 
 Display Name
 
-📦 Script
+**📦 Script**
 
 File: Service-BulkAction.ps1
 
-🚀 Usage
+**🚀 Usage**
 1️⃣ Run the script
 .\Service-BulkAction.ps1
 
@@ -46,13 +46,10 @@ Example:
 
 Veeam
 
-
 This will match services like:
 
 Veeam Backup Service
-
 AWS Veeam Service
-
 BVeeamS
 
 4️⃣ Confirm execution
@@ -64,28 +61,23 @@ The script uses a wildcard contains search:
 
 -like "*SearchText*"
 
-
 This matches any service whose Name or DisplayName contains the text.
 
-⚠️ WARNING (Important)
+**⚠️ WARNING (Important)**
 
 This script can stop multiple critical services if used incorrectly.
-
-⚠️ Avoid generic keywords like:
+**
+⚠️ Avoid generic keywords like:**
 
 SQL
-
 Agent
-
 Service
-
 Update
-
 Microsoft
 
 Always review the list before confirming.
 
-🧑‍💻 Requirements
+**🧑‍💻 Requirements**
 
 Windows 10 / Windows Server 2016+
 
