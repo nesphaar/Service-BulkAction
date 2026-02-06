@@ -31,18 +31,21 @@ Designed for Windows 10 / Windows Server 2016+.
 Run the script:
 
 ```powershell
-.\Service-BulkAction.ps1```
+.\Service-BulkAction.ps1
+```
 
 If blocked:
 ```powershell
-Set-ExecutionPolicy RemoteSigned -Scope Process```
+Set-ExecutionPolicy RemoteSigned -Scope Process
+```
 ⚠️ Run PowerShell as Administrator for full functionality.
 
 ## **🔎 How Search Works**
 
 The script matches services where Name or DisplayName contains the provided text:
 ```powershell
--like "*SearchText*"```
+-like "*SearchText*"
+```
 
 ## **⚠️ Warning**
 This script can modify multiple services at once.
