@@ -1,86 +1,62 @@
-# Service-BulkAction
-**🛠️ Bulk Service Manager (PowerShell)**
+# **Service-BulkAction**
 
-A lightweight interactive PowerShell tool to start or stop Windows services in bulk by searching for text inside the service Name or DisplayName.
+🛠️ **Bulk Service Manager (PowerShell)**
 
-Designed for Windows 10 and newer.
+Interactive PowerShell script to manage Windows services in bulk by searching text in the service **Name** or **DisplayName**.
 
-**✨ Features**
+Designed for Windows 10 / Windows Server 2016+.
 
-Interactive menu (numeric selection)
+---
 
-Bulk START or STOP services
+## **✨ Features**
 
-Search by substring (contains match)
+- Interactive numeric menu
+- Bulk **START / STOP / STATUS**
+- Bulk service configuration:
+  - **ENABLE (Automatic)**
+  - **ENABLE (Delayed Start)**
+  - **MANUAL**
+  - **DISABLE**
+- Case-insensitive substring search
+- Preview of changes: **Current StartType → New StartType**
+- Confirmation before executing actions
+- Extra confirmation before **DISABLE**
+- Clean handling of *Access Denied* / protected services
+- Automatic error logging to file
 
-Case-insensitive matching
+---
 
-Confirmation prompt before executing
+## **🚀 Usage**
 
-Works with both:
+Run the script:
 
-Service Name
-
-Display Name
-
-**📦 Script**
-
-File: Service-BulkAction.ps1
-
-**🚀 Usage**
-1️⃣ Run the script
+```powershell
 .\Service-BulkAction.ps1
 
-
-If script execution is blocked:
-
+If blocked:
+```powershell
 Set-ExecutionPolicy RemoteSigned -Scope Process
+⚠️ Run PowerShell as Administrator for full functionality.
 
-2️⃣ Select action
-1) START services
-2) STOP services
+## **🔎 How Search Works**
 
-3️⃣ Enter search text
-
-Example:
-
-Veeam
-
-This will match services like:
-
-Veeam Backup Service
-AWS Veeam Service
-BVeeamS
-
-4️⃣ Confirm execution
-Confirm action STOP? (y/n)
-
-🧠 How It Works
-
-The script uses a wildcard contains search:
-
+The script matches services where Name or DisplayName contains the provided text:
+```powershell
 -like "*SearchText*"
 
-This matches any service whose Name or DisplayName contains the text.
+## **⚠️ Warning**
+This script can modify multiple services at once.
+Avoid generic keywords such as:
 
-**⚠️ WARNING (Important)**
-
-This script can stop multiple critical services if used incorrectly.
-**
-⚠️ Avoid generic keywords like:**
-
-SQL
-Agent
-Service
-Update
 Microsoft
+Update
+SQL
+Service
 
-Always review the list before confirming.
+Always review the preview list before confirming any action.
 
-**🧑‍💻 Requirements**
+## **🧑‍💻 Requirements**
 
 Windows 10 / Windows Server 2016+
-
 PowerShell 5.1 or PowerShell 7+
-
 Administrator privileges recommended
