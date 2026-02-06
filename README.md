@@ -40,12 +40,16 @@ Set-ExecutionPolicy RemoteSigned -Scope Process
 ```
 ⚠️ Run PowerShell as Administrator for full functionality.
 
+---
+
 ## **🔎 How Search Works**
 
 The script matches services where Name or DisplayName contains the provided text:
 ```powershell
 -like "*SearchText*"
 ```
+
+---
 
 ## **⚠️ Warning**
 This script can modify multiple services at once.
@@ -57,6 +61,8 @@ SQL
 Service
 
 Always review the preview list before confirming any action.
+
+---
 
 ## **🧑‍💻 Requirements**
 
